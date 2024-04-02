@@ -4,10 +4,6 @@ const { outlookUser } = require("./models/Outlook.User.model");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const OutlookStrategy = require('passport-outlook').Strategy;
 
-
-const outlookSecret = "X_C8Q~7HF6mrPUo55fj5ri728XUnp1e_FBzaIdt3"
-const outlookClientId = "43161333-e53d-48b9-974f-8148fb7a8eeb"
-
 passport.serializeUser((user, done) => {
   done(null, user);
 });
@@ -44,8 +40,8 @@ passport.use(
 );
 
 passport.use(new OutlookStrategy({
-  clientID: outlookClientId,
-  clientSecret: outlookSecret,
+  clientID: process.env.ClientID_Outlook,
+  clientSecret: process.env.ClientSecret_Outlook,
   callbackURL: "http://localhost:3000/auth/outlook/callback",
   passReqToCallback: true
 },
