@@ -33,7 +33,7 @@ googlerouter.get("/gmail", async (req, res) => {
   const oauth2Client = new google.auth.OAuth2(
     process.env.ClientID,
     process.env.ClientSecret,
-    process.env.REDIRECT_URL
+    "http://localhost:3000/auth/google/callback"
   );
 
   oauth2Client.setCredentials({
