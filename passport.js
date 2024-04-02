@@ -42,7 +42,7 @@ passport.use(
 passport.use(new OutlookStrategy({
   clientID: process.env.ClientID_Outlook,
   clientSecret: process.env.ClientSecret_Outlook,
-  callbackURL: "http://localhost:3000/auth/outlook/callback",
+  callbackURL: "https://impossible-wig-dog.cyclic.app/auth/outlook/callback",
   passReqToCallback: true
 },
 (accessToken, refreshToken, profile, done) => {
