@@ -17,7 +17,7 @@ passport.use(
     {
       clientID: process.env.ClientID,
       clientSecret: process.env.ClientSecret,
-      callbackURL: "/auth/google/callback",
+      callbackURL: "https://impossible-wig-dog.cyclic.app/auth/google/callback",
     },
     (accessToken, refreshToken, profile, done) => {
       console.log("Google Profile:", profile);
