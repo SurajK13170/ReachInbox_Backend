@@ -31,7 +31,7 @@ googlerouter.get("/gmail", async (req, res) => {
   const { accessToken, refreshToken } = req.user.tokens;
 
   const oauth2Client = new google.auth.OAuth2(
-    process.env.ClientId,
+    process.env.ClientID,
     process.env.ClientSecret,
     process.env.REDIRECT_URL
   );
